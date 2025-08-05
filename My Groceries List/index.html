@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Grocery List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <button id="toggleModeBtn" class="mode-toggle">🌙 Dark Mode</button>
+
+      <div class="language-select">
+        <label for="languageSelect">🌐 Language:</label>
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="ta">தமிழ்</option>
+        </select>
+      </div>
+    </div>
+
+    <h2 id="title">🛒 My Grocery List</h2>
+
+    <div class="input-group">
+      <select id="emojiSelect">
+        <option value="">🛒</option>
+        <option value="🥛">🥛</option>
+        <option value="🍞">🍞</option>
+        <option value="🥚">🥚</option>
+        <option value="🍺">🍺</option>
+        <option value="🥦">🥦</option>
+        <option value="🍎">🍎</option>
+        <option value="🧪">🧪</option>
+        <option value="🍬">🍬</option>
+        <option value="🧂">🧂</option>
+        <option value="🍵">🍵</option>
+        <option value="☕">☕</option>
+        <option value="🧃">🧃</option>
+        <option value="🍪">🍪</option>
+        <option value="🚰">🚰</option>
+      </select>
+      <input type="text" id="itemInput" placeholder="Add grocery item...">
+      <button onclick="addItem()">+ Add</button>
+    </div>
+
+    <ul id="groceryList"></ul>
+    <div class="summary" id="summaryText"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
